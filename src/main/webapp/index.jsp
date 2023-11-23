@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: OleksandrJR
-  Date: 10/11/23
-  Time: 20:27
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,15 +11,21 @@
 
 <div class="card">
     <div class="card-header">
-        <h1>Final project hello page</h1>
+        <h1>Фінальний проєкт до модуля 3</h1>
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">
-            <p>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-            </p>
-            <a class="btn btn-primary" href="start">Start quest</a>
+            <p>Проект було створено по макету завдання.</p>
         </blockquote>
+    </div>
+    <div >
+        <form class="card-header" action="http://localhost:8080/start" method="get">
+            <br>
+            <label for="nicNameStart">Nicknames:</label>
+            <input type="text" id="nicNameStart" name="nicName" required>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Start">
+        </form>
     </div>
 </div>
 

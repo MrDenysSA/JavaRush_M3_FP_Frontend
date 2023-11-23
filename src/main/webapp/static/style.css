@@ -6,3 +6,30 @@ body {
     margin: 0;
     padding: 20px;
 }
+
+.create-line {
+    width: 200px;
+    height: 20px;
+    border-top: 10px solid green;
+}
+
+.load {
+    background-color: #1c7430;
+    min-width: max-content;
+    height: 20px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: lightgreen;
+}
+
+.completed {
+    background-color: green;
+}
