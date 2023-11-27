@@ -24,7 +24,6 @@ public class StartQuestServlet extends HttpServlet {
                     request.getParameter("answer").equals("2") && totalQuestions == 3) {
                 amountGames = 0;
                 getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-                System.out.println("index");
             }
         }
 

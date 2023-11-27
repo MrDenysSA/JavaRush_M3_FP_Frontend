@@ -15,10 +15,10 @@
 
 <div>
     <form id="startButton">
-        <p class="p-3"><%= request.getAttribute("question") %>
-        </p>
+        <h2><p class="p-3"><%= request.getAttribute("question") %>
+        </p></h2>
 
-        <p>
+        <h4><p>
             <input type="radio" name="answer" value="1" required>
             <label><%= request.getAttribute("answer1") %>
             </label>
@@ -26,15 +26,16 @@
             <input type="radio" name="answer" value="2" required>
             <label><%= session.getAttribute("answer2") %>
             </label>
-        </p>
-        <br>
-        <input type="submit" name="submit" value="ВІДПОВІСТИ">
+        </p></h4>
+        <input class="button-quest" type="submit" name="submit" value="ВІДПОВІСТИ">
         <br>
     </form>
 </div>
 
 <div class="progress-container">
-    <p><div class="progress-bar" id="progressBar"></div></p>
+    <p>
+    <div class="progress-bar" id="progressBar"></div>
+    </p>
 </div>
 
 <div class="statistics">
@@ -52,8 +53,7 @@
 </div>
 
 <div>
-    <p  id="counterQuestion"><%= request.getAttribute("counter")%>
-<%--        hidden--%>
+    <p hidden id="counterQuestion"><%= request.getAttribute("counter")%>
     </p
 </div>
 
