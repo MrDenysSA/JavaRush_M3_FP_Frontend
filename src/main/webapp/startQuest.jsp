@@ -34,10 +34,10 @@
 </div>
 
 <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
+    <p><div class="progress-bar" id="progressBar"></div></p>
 </div>
 
-<div>
+<div class="statistics">
     <p>
     <h2>Statistics</h2></p>
     <p>IP Address:
@@ -45,15 +45,15 @@
     </p>
     <p>Nicknames: <%= request.getAttribute("nicknames") %>
     </p>
-
-    <%--    Нужно исправить щетчик? Прикрутить еще один щетчик из сервера которій будет считать цикли--%>
     <p>Game counter:
-        <nobr id="gameCounter"></nobr><%= request.getAttribute("amountGames")%>
+        <nobr id="gameCounter"></nobr>
+        <%= request.getAttribute("amountGames")%>
     </p>
 </div>
 
 <div>
-    <p id="counterQuestion"><%= request.getAttribute("counter")%>
+    <p  id="counterQuestion"><%= request.getAttribute("counter")%>
+<%--        hidden--%>
     </p
 </div>
 

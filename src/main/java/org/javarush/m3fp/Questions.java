@@ -5,12 +5,16 @@ public class Questions {
     String questions2 = "Ви прийняли виклик.\n <br><strong>Піднятися на капітанський місток?</strong>";
     String questions3 = "Ви піднялись на місток.\n <br><strong>Хто ви?</strong>\"";
 
+    String lostGame = "<br><strong>Ви програли</strong>";
+    String winGame = "<br><strong>Ви перемогли</strong>";
+
     String answer1 = "Прийняти виклик";
     String answer2 = "Відхилити виклик";
     String answer3 = "Піднятися на місток";
     String answer4 = "Відмовитися підніматися на місток";
     String answer5 = "Розповісти правду про себе";
     String answer6 = "Збрехати про себе";
-    String answer7 = "Збрехати про себе";
 
+    String restert = "Почати з початку";
+    String initialPage = "На початкову сторінку";
 }

@@ -33,3 +33,7 @@ body {
 .completed {
     background-color: green;
 }
+
+.statistics {
+    background-color: #7abaff;
+}
