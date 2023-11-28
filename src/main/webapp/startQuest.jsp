@@ -27,7 +27,7 @@
             <label><%= session.getAttribute("answer2") %>
             </label>
         </p></h4>
-        <input class="button-quest" type="submit" name="submit" value="ВІДПОВІСТИ">
+        <input class="button-quest" type="submit" value="ВІДПОВІСТИ">
         <br>
     </form>
 </div>

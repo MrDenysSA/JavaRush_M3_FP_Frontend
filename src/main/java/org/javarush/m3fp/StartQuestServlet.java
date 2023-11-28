@@ -17,20 +17,13 @@ public class StartQuestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
+
         nickname(request);
-
-        if (request.getParameter("answer") != null) {
-            if (request.getParameter("answer").equals("2") && totalQuestions == -1 ||
-                    request.getParameter("answer").equals("2") && totalQuestions == 3) {
-                amountGames = 0;
-                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-            }
-        }
-
-        logicGame(request);
+        logicGame(request, response);
 
         request.setAttribute("counter", totalQuestions);
         request.setAttribute("amountGames", amountGames);
+
         getServletContext().getRequestDispatcher("/startQuest.jsp").forward(request, response);
     }
 
@@ -41,10 +34,11 @@ public class StartQuestServlet extends HttpServlet {
         request.setAttribute("nicknames", nickname);
     }
 
-    public HttpServletRequest logicGame(HttpServletRequest request) {
+    public HttpServletRequest logicGame(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         String answerRequest = request.getParameter("answer");
         Questions questions = new Questions();
+
 
         if (answerRequest == null) {
             request.setAttribute("question", questions.questions1);
@@ -52,6 +46,12 @@ public class StartQuestServlet extends HttpServlet {
             session.setAttribute("answer2", questions.answer2);
             totalQuestions = 0;
             return request;
+        }
+
+        if (request.getParameter("answer").equals("2") && totalQuestions == -1 ||
+                request.getParameter("answer").equals("2") && totalQuestions == 3) {
+            amountGames = 0;
+            getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         }
 
         totalQuestions++;
@@ -79,7 +79,7 @@ public class StartQuestServlet extends HttpServlet {
 
         } else if (answerRequest.equals("1") && totalQuestions == 4) {
             totalQuestions = -1;
-            logicGame(request);
+            logicGame(request, response);
 
         } else if (answerRequest.equals("2") && totalQuestions > 0) {
             request.setAttribute("question", questions.lostGame);
@@ -89,7 +89,6 @@ public class StartQuestServlet extends HttpServlet {
         }
         return request;
     }
-
 }
 
 
