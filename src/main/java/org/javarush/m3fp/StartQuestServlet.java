@@ -74,7 +74,7 @@ public class StartQuestServlet extends HttpServlet {
 
         } else if (answerRequest.equals("1") && totalQuestions == 3) {
             request.setAttribute("question", questions.winGame);
-            request.setAttribute("answer1", questions.restert);
+            request.setAttribute("answer1", questions.restart);
             session.setAttribute("answer2", questions.initialPage);
 
         } else if (answerRequest.equals("1") && totalQuestions == 4) {
@@ -83,7 +83,7 @@ public class StartQuestServlet extends HttpServlet {
 
         } else if (answerRequest.equals("2") && totalQuestions > 0) {
             request.setAttribute("question", questions.lostGame);
-            request.setAttribute("answer1", questions.restert);
+            request.setAttribute("answer1", questions.restart);
             session.setAttribute("answer2", questions.initialPage);
             totalQuestions = -1;
         }

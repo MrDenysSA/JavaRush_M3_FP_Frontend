@@ -18,7 +18,7 @@
             <p>Проект було створено по макету завдання.</p>
         </blockquote>
     </div>
-    <div >
+    <div>
         <form class="card-header" action="http://localhost:8080/start" method="get">
             <br>
             <label for="nicNameStart">Nicknames:</label>

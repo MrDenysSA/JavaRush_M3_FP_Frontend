@@ -15,6 +15,6 @@ public class Questions {
     String answer5 = "Розповісти правду про себе";
     String answer6 = "Збрехати про себе";
 
-    String restert = "Почати з початку";
+    String restart = "Почати з початку";
     String initialPage = "На початкову сторінку";
 }

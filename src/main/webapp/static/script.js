@@ -9,7 +9,7 @@ initCounterGame()
 moveProgressBar()
 
 function initCounterGame() {
-    counterGame=document.getElementById('counterQuestion').innerText
+    counterGame = document.getElementById('counterQuestion').innerText
 }
 
 fetch('https://api64.ipify.org?format=json')
@@ -22,7 +22,7 @@ fetch('https://api64.ipify.org?format=json')
 function moveProgressBar() {
     progressBar = document.getElementById('progressBar')
     let count = 0;
-    while(count<counterGame) {
+    while (count < counterGame) {
         count++
         if (counterGame <= totalQuestions) {
             width += 100 / totalQuestions;
