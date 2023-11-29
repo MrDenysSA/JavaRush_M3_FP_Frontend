@@ -1,2 +1,3 @@
 # project-servlet
-Sandbox project for experiments with JSP and Servlets. Need Java 17 and Tomcat 9. To configure:
+Tomcat 9.0.83
+Created according to the layout from the example.
